@@ -23,6 +23,7 @@ struct NavigationProjectApp: App {
                             Text("1st tab")
                         }
                     }.tag(0)
+                
                 RootView(title: "HomeView Two")
                     .tabItem {
                         VStack {
@@ -30,6 +31,10 @@ struct NavigationProjectApp: App {
                             Text("2d tab")
                         }
                     }.tag(1)
+            }
+            .onAppear() {
+                UITabBar.appearance().backgroundColor = .darkGray
+                UITabBar.appearance().unselectedItemTintColor = .lightGray
             }
         }
     }
