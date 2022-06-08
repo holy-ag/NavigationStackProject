@@ -2,7 +2,7 @@
 //  ModalView.swift
 //  NavigationStack
 //
-//  Created by admin-pp on 08.06.22.
+//  Created by Pascal Peuch on 08.06.22.
 //
 
 import SwiftUI
@@ -10,30 +10,35 @@ import NavigationStack
 
 struct FourthLevelView: View {
     @State var isModalChildOpen = false
+    
     var body: some View {
+        view(for: isModalChildOpen)
+    }
+    
+    @ViewBuilder func view(for state: Bool) -> some View {
         ZStack {
-            VStack {
-                PopView {
-                    Text("Pop previous")
-                }
-                Spacer()
-                Text("4")
-                    .font(.largeTitle)
-                Spacer()
-                Button("Open modal child", action: openModalChild)
-            }
-            if isModalChildOpen { // Manage this specific transition yourself
+            if state {
                 ModalChild(iAmOpen: $isModalChildOpen)
-                    .transition(.slide)
-                    .transition(.move(edge: .bottom))
-                    .animation(.easeOut, value: true)
-                    .zIndex(1) // This might seem unnecessary, but it's needed in order for the transition to occur properly in a ZStack
+            } else {
+                VStack {
+                    PopView {
+                        Text("Pop previous")
+                    }
+                    Spacer()
+                    Text("4")
+                        .font(.largeTitle)
+                    Spacer()
+                    Button("Open modal child", action: openModalChild)
+                }
             }
         }
+        .transition(.move(edge: .bottom))
     }
 
     private func openModalChild() {
-        isModalChildOpen = true
+        withAnimation(.linear) {
+            isModalChildOpen = true
+        }
     }
 }
 
@@ -50,6 +55,7 @@ struct ModalChild: View {
                 Button("CLOSE", action: closeModalChild)
             }
         }
+        .transition(.move(edge: .bottom))
     }
 
     private func closeModalChild() {

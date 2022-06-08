@@ -2,7 +2,7 @@
 //  NavigationProjectUITests.swift
 //  NavigationProjectUITests
 //
-//  Created by admin-pp on 07.06.22.
+//  Created by Pascal Peuch on 07.06.22.
 //
 
 import XCTest
