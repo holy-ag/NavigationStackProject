@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013DCFAD2850D3B0002D613A /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 013DCFAC2850D3B0002D613A /* NavigationStack */; };
 		01FACD18284F8D63005F5042 /* NavigationProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD17284F8D63005F5042 /* NavigationProjectApp.swift */; };
 		01FACD1A284F8D63005F5042 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD19284F8D63005F5042 /* RootView.swift */; };
 		01FACD1C284F8D64005F5042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FACD1B284F8D64005F5042 /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		01FACD29284F8D64005F5042 /* NavigationProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD28284F8D64005F5042 /* NavigationProjectTests.swift */; };
 		01FACD33284F8D64005F5042 /* NavigationProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD32284F8D64005F5042 /* NavigationProjectUITests.swift */; };
 		01FACD35284F8D64005F5042 /* NavigationProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD34284F8D64005F5042 /* NavigationProjectUITestsLaunchTests.swift */; };
-		01FACD43284F8DE7005F5042 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 01FACD42284F8DE7005F5042 /* NavigationStack */; };
 		01FACD45284F9112005F5042 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD44284F9112005F5042 /* HomeView.swift */; };
 		01FACD47284F9325005F5042 /* FirstLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD46284F9324005F5042 /* FirstLevelView.swift */; };
 		01FACD49284F9BAD005F5042 /* SecondLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FACD48284F9BAD005F5042 /* SecondLevelView.swift */; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FACD43284F8DE7005F5042 /* NavigationStack in Frameworks */,
+				013DCFAD2850D3B0002D613A /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +161,7 @@
 			);
 			name = NavigationStack;
 			packageProductDependencies = (
-				01FACD42284F8DE7005F5042 /* NavigationStack */,
+				013DCFAC2850D3B0002D613A /* NavigationStack */,
 			);
 			productName = NavigationStack;
 			productReference = 01FACD14284F8D63005F5042 /* NavigationProject.app */;
@@ -236,7 +236,7 @@
 			);
 			mainGroup = 01FACD0B284F8D63005F5042;
 			packageReferences = (
-				01FACD41284F8DE7005F5042 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+				013DCFAB2850D3B0002D613A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
 			);
 			productRefGroup = 01FACD15284F8D63005F5042 /* Products */;
 			projectDirPath = "";
@@ -613,7 +613,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		01FACD41284F8DE7005F5042 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+		013DCFAB2850D3B0002D613A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack.git";
 			requirement = {
@@ -624,9 +624,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		01FACD42284F8DE7005F5042 /* NavigationStack */ = {
+		013DCFAC2850D3B0002D613A /* NavigationStack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 01FACD41284F8DE7005F5042 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			package = 013DCFAB2850D3B0002D613A /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
 			productName = NavigationStack;
 		};
 /* End XCSwiftPackageProductDependency section */
