@@ -1,13 +1,13 @@
 //
-//  NavigationStackUITestsLaunchTests.swift
-//  NavigationStackUITests
+//  NavigationProjectUITestsLaunchTests.swift
+//  NavigationProjectUITests
 //
 //  Created by admin-pp on 07.06.22.
 //
 
 import XCTest
 
-class NavigationStackUITestsLaunchTests: XCTestCase {
+class NavigationProjectUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

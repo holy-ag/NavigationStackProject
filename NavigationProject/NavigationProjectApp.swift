@@ -1,17 +1,18 @@
 //
-//  NavigationStackApp.swift
-//  NavigationStack
+//  NavigationProjectApp.swift
+//  NavigationProject
 //
 //  Created by admin-pp on 07.06.22.
 //
 
 import SwiftUI
+import NavigationStack
 
 @main
-struct NavigationStackApp: App {
+struct NavigationProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
