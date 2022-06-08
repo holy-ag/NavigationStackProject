@@ -10,9 +10,27 @@ import NavigationStack
 
 @main
 struct NavigationProjectApp: App {
+    
+    @State var selectedTab = 1
+    
     var body: some Scene {
         WindowGroup {
-            RootView()
+            TabView(selection: $selectedTab) {
+                RootView(title: "HomeView One")
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "1.circle.fill")
+                            Text("1st tab")
+                        }
+                    }.tag(0)
+                RootView(title: "HomeView Two")
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "2.circle.fill")
+                            Text("2d tab")
+                        }
+                    }.tag(1)
+            }
         }
     }
 }

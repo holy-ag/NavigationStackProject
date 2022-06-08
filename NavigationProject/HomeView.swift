@@ -10,12 +10,13 @@ import NavigationStack
 
 struct HomeView: View {
     
+    let title: String?
     @EnvironmentObject private var navigationStack: NavigationStack
     
     var body: some View {
         VStack {
             Spacer()
-            Text("Home View")
+            Text(title ?? "Home View")
                 .font(.largeTitle)
             Spacer()
             PushView(destination: FirstLevelView(), destinationId: ViewDestinations.firstLevelView.rawValue) {
