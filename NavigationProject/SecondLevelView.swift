@@ -18,7 +18,7 @@ struct SecondLevelView: View {
             Text("2")
                 .font(.largeTitle)
             Spacer()
-            PushView(destination: ThirdLevelView(), destinationId: ViewDestinations.thirdLevelView.rawValue) {
+            PushView(destination: ThirdLevelView(viewModel: ThirdLevelViewModel()), destinationId: ViewDestinations.thirdLevelView.rawValue) {
                 Text("Push next")
             }
             PopView(destination: .root) {

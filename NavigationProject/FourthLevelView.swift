@@ -32,7 +32,6 @@ struct FourthLevelView: View {
                 }
             }
         }
-        .transition(.move(edge: .bottom))
         .padding(.vertical, 16)
     }
 

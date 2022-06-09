@@ -14,7 +14,7 @@ class HomeViewModel {
     func goToFourthView() {
         self.navigationStack?.push(FirstLevelView(), withId: ViewDestinations.firstLevelView.rawValue)
         self.navigationStack?.push(SecondLevelView(), withId: ViewDestinations.secondLevelView.rawValue)
-        self.navigationStack?.push(ThirdLevelView(), withId: ViewDestinations.thirdLevelView.rawValue)
+        self.navigationStack?.push(ThirdLevelView(viewModel: ThirdLevelViewModel()), withId: ViewDestinations.thirdLevelView.rawValue)
         self.navigationStack?.push(FourthLevelView(isModalChildOpen: true), withId: ViewDestinations.fourthLevelView.rawValue)
     }
 }
