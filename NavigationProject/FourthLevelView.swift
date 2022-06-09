@@ -30,9 +30,9 @@ struct FourthLevelView: View {
                     Spacer()
                     Button("Open modal child", action: openModalChild)
                 }
+                .padding(.vertical, 16)
             }
         }
-        .padding(.vertical, 16)
     }
 
     private func openModalChild() {
@@ -53,12 +53,15 @@ struct ModalChild: View {
                 Text("MODAL CHILD")
                 Spacer()
                 Button("CLOSE", action: closeModalChild)
+                    .padding(.bottom, 16)
             }
         }
         .transition(.move(edge: .bottom))
     }
 
     private func closeModalChild() {
-        iAmOpen = false
+        withAnimation(.linear) {
+            iAmOpen = false
+        }
     }
 }

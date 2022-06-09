@@ -38,6 +38,4 @@ struct ThirdLevelView: View {
             .padding(.vertical, 16)
         }
     }
-    
-    
 }
