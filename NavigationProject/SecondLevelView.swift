@@ -25,5 +25,6 @@ struct SecondLevelView: View {
                 Text("Pop to root")
             }
         }
+        .padding(.vertical, 16)
     }
 }

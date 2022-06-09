@@ -25,7 +25,7 @@ struct ThirdLevelView: View {
             PushView(destination: FourthLevelView(), destinationId: ViewDestinations.fourthLevelView.rawValue) {
                 Text("Push next")
             }
-            
         }
+        .padding(.vertical, 16)
     }
 }

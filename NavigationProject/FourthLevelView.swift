@@ -33,6 +33,7 @@ struct FourthLevelView: View {
             }
         }
         .transition(.move(edge: .bottom))
+        .padding(.vertical, 16)
     }
 
     private func openModalChild() {

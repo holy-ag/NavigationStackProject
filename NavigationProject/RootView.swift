@@ -9,10 +9,12 @@ import SwiftUI
 import NavigationStack
 
 struct RootView: View {
+    
     let title: String?
+    
     var body: some View {
         NavigationStackView(transitionType: .custom(.slide), easing: .easeInOut) {
-            HomeView(title: title)
+            HomeView(model: HomeViewModel(), title: title)
         }
     }
 }

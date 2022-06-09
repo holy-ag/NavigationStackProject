@@ -22,5 +22,6 @@ struct FirstLevelView: View {
                 Text("Push next")
             }
         }
+        .padding(.vertical, 16)
     }
 }

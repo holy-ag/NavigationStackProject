@@ -10,6 +10,7 @@ import NavigationStack
 
 struct HomeView: View {
     
+    let model: HomeViewModel
     let title: String?
     @EnvironmentObject private var navigationStack: NavigationStack
     
@@ -23,13 +24,15 @@ struct HomeView: View {
                 Text("Push first View")
             }
             Button("Go to 4") {
-                self.navigationStack.push(FirstLevelView(), withId: ViewDestinations.firstLevelView.rawValue)
-                self.navigationStack.push(SecondLevelView(), withId: ViewDestinations.secondLevelView.rawValue)
-                self.navigationStack.push(ThirdLevelView(), withId: ViewDestinations.thirdLevelView.rawValue)
-                self.navigationStack.push(FourthLevelView(isModalChildOpen: true), withId: ViewDestinations.fourthLevelView.rawValue)
+                model.goToFourthView()
             }
         }
+        .onAppear() {
+            model.navigationStack = navigationStack
+        }
+        .padding(.vertical, 16)
     }
+        
 }
 
 enum ViewDestinations: String {
